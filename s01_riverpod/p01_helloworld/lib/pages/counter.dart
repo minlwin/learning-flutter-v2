@@ -51,15 +51,22 @@ class CounterApp extends ConsumerWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              MaterialButton(
-                child: const Text("Down"),
+              OutlinedButton(
                 onPressed: () =>
                     ref.read(counterStateProvider.notifier).countDown(),
+                style: OutlinedButton.styleFrom(
+                  minimumSize: const Size(100, 40),
+                ),
+                child: const Text("Down"),
               ),
-              MaterialButton(
-                child: const Text("Up"),
+              const SizedBox(width: 8),
+              OutlinedButton(
                 onPressed: () =>
                     ref.read(counterStateProvider.notifier).countUp(),
+                style: OutlinedButton.styleFrom(
+                  minimumSize: const Size(100, 40),
+                ),
+                child: const Text("Up"),
               )
             ],
           )

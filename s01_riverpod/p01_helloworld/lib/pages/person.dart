@@ -60,7 +60,6 @@ class SubMenu extends ConsumerWidget {
           children: [
             Expanded(
               child: Card(
-                elevation: 0.4,
                 child: Padding(
                   padding: EdgeInsets.all(8),
                   child: Column(
@@ -78,7 +77,6 @@ class SubMenu extends ConsumerWidget {
             SizedBox(width: 8),
             Expanded(
               child: Card(
-                elevation: 0.4,
                 child: Padding(
                   padding: EdgeInsets.all(8),
                   child: Column(
@@ -96,7 +94,6 @@ class SubMenu extends ConsumerWidget {
             SizedBox(width: 8),
             Expanded(
               child: Card(
-                elevation: 0.4,
                 child: Padding(
                   padding: EdgeInsets.all(8),
                   child: Column(
@@ -137,7 +134,6 @@ class PersonalSetting extends ConsumerWidget {
           ),
         ),
         Card(
-          elevation: 0.4,
           child: Padding(
             padding: const EdgeInsets.all(4.0),
             child: ListView(
@@ -197,7 +193,6 @@ class ProfileWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return const Card(
-      elevation: 0.4,
       child: Padding(
         padding: EdgeInsets.all(8.0),
         child: Row(

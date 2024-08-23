@@ -18,14 +18,18 @@ class MyFirstApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Helloworld",
+      title: "Riverpod 1",
+      theme: Theme.of(context).copyWith(
+          scaffoldBackgroundColor: Colors.lightBlue[50],
+          appBarTheme: AppBarTheme.of(context)
+              .copyWith(backgroundColor: Colors.lightBlue[50])),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Riverpod"),
-          backgroundColor: const Color.fromARGB(255, 213, 204, 245),
+          title: const Text("Learning Riverpod Tutorial 1"),
         ),
         body: _loadBody(ref.watch(currentPageProvider)),
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.lightBlue[50],
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
@@ -41,7 +45,7 @@ class MyFirstApp extends ConsumerWidget {
             )
           ],
           currentIndex: ref.watch(currentPageProvider),
-          selectedItemColor: const Color.fromARGB(255, 13, 5, 248),
+          selectedItemColor: Colors.blueAccent,
           onTap: (value) =>
               ref.read(currentPageProvider.notifier).setPage(value),
         ),
