@@ -1,5 +1,8 @@
 package com.jdc.customers.domain.repo;
 
-public interface TownshipRepo {
+import com.jdc.customers.domain.BaseRepository;
+import com.jdc.customers.domain.entity.Township;
+
+public interface TownshipRepo extends BaseRepository<Township, Integer>{
 
 }
