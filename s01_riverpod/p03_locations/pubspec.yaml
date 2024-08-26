@@ -39,6 +39,10 @@ dependencies:
   riverpod_annotation: ^2.3.5
   freezed_annotation: ^2.4.4
   go_router: ^14.2.7
+  freezed: ^2.5.2
+  json_annotation: ^4.9.0
+  json_serializable: ^6.8.0
+  http: ^1.2.2
 
 dev_dependencies:
   flutter_test:

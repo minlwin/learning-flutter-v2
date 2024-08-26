@@ -59,4 +59,13 @@ public class LocationService {
 		});
 	}
 
+	public DivisionInfo findDivision(int id) {
+		return divisionRepo.findById(id).map(DivisionInfo::from).orElseThrow();
+	}
+
+	public DistrictInfo findDistrict(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

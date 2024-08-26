@@ -3,6 +3,7 @@ package com.jdc.customers.api;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,9 +29,19 @@ public class LocationApi {
 		return service.search(search);
 	}
 
+	@GetMapping("divisions/{id}")
+	DivisionInfo findDivision(@PathVariable int id) {
+		return service.findDivision(id);
+	}
+
 	@GetMapping("districts")
 	List<DistrictInfo> districts(DistrictSearch search) {
 		return service.search(search);
+	}
+
+	@GetMapping("districts/{id}")
+	DistrictInfo findDistrict(@PathVariable int id) {
+		return service.findDistrict(id);
 	}
 
 	@GetMapping("townships")

@@ -10,6 +10,10 @@ import jakarta.persistence.criteria.JoinType;
 import jakarta.persistence.criteria.Root;
 
 public record DivisionInfo(int id, String name, long districts) {
+	
+	public static DivisionInfo from(Division entity) {
+		return new DivisionInfo(entity.getId(), entity.getName(), entity.getDistrict().size());
+	}
 
 	public static void select(CriteriaBuilder cb, CriteriaQuery<DivisionInfo> cq, Root<Division> root) {
 		var district = root.join(Division_.district, JoinType.LEFT);
