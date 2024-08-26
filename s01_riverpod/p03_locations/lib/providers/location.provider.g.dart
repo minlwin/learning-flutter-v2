@@ -1,33 +1,25 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'district.dart';
-
-// **************************************************************************
-// JsonSerializableGenerator
-// **************************************************************************
-
-_$$DistrictImpl _$$$DistrictImplFromJson(Map<String, dynamic> json) =>
-    _$$DistrictImpl(
-      id: (json['id'] as num).toInt(),
-      name: json['name'] as String,
-      divisionId: (json['divisionId'] as num).toInt(),
-      division: json['division'] as String,
-      townships: (json['townships'] as num).toInt(),
-    );
-
-Map<String, dynamic> _$$$DistrictImplToJson(_$$DistrictImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'divisionId': instance.divisionId,
-      'division': instance.division,
-      'townships': instance.townships,
-    };
+part of 'location.provider.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
+String _$divisionListHash() => r'96c70f9dd704258f133c2d0770ffaab3bc192fd8';
+
+/// See also [divisionList].
+@ProviderFor(divisionList)
+final divisionListProvider = AutoDisposeFutureProvider<List<Division>>.internal(
+  divisionList,
+  name: r'divisionListProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$divisionListHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef DivisionListRef = AutoDisposeFutureProviderRef<List<Division>>;
 String _$districtForDivisionHash() =>
     r'59e11985add04af39efdc8f066eadfad3f8857a5';
 
@@ -308,6 +300,267 @@ class _SelectedDivisionProviderElement
 
   @override
   int get id => (origin as SelectedDivisionProvider).id;
+}
+
+String _$selectedDistrictHash() => r'f2e2ef2e9067ceb1a383a96ca24214b2bb645015';
+
+/// See also [selectedDistrict].
+@ProviderFor(selectedDistrict)
+const selectedDistrictProvider = SelectedDistrictFamily();
+
+/// See also [selectedDistrict].
+class SelectedDistrictFamily extends Family<AsyncValue<District>> {
+  /// See also [selectedDistrict].
+  const SelectedDistrictFamily();
+
+  /// See also [selectedDistrict].
+  SelectedDistrictProvider call(
+    String districtId,
+  ) {
+    return SelectedDistrictProvider(
+      districtId,
+    );
+  }
+
+  @override
+  SelectedDistrictProvider getProviderOverride(
+    covariant SelectedDistrictProvider provider,
+  ) {
+    return call(
+      provider.districtId,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'selectedDistrictProvider';
+}
+
+/// See also [selectedDistrict].
+class SelectedDistrictProvider extends AutoDisposeFutureProvider<District> {
+  /// See also [selectedDistrict].
+  SelectedDistrictProvider(
+    String districtId,
+  ) : this._internal(
+          (ref) => selectedDistrict(
+            ref as SelectedDistrictRef,
+            districtId,
+          ),
+          from: selectedDistrictProvider,
+          name: r'selectedDistrictProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$selectedDistrictHash,
+          dependencies: SelectedDistrictFamily._dependencies,
+          allTransitiveDependencies:
+              SelectedDistrictFamily._allTransitiveDependencies,
+          districtId: districtId,
+        );
+
+  SelectedDistrictProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.districtId,
+  }) : super.internal();
+
+  final String districtId;
+
+  @override
+  Override overrideWith(
+    FutureOr<District> Function(SelectedDistrictRef provider) create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: SelectedDistrictProvider._internal(
+        (ref) => create(ref as SelectedDistrictRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        districtId: districtId,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeFutureProviderElement<District> createElement() {
+    return _SelectedDistrictProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is SelectedDistrictProvider && other.districtId == districtId;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, districtId.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+mixin SelectedDistrictRef on AutoDisposeFutureProviderRef<District> {
+  /// The parameter `districtId` of this provider.
+  String get districtId;
+}
+
+class _SelectedDistrictProviderElement
+    extends AutoDisposeFutureProviderElement<District>
+    with SelectedDistrictRef {
+  _SelectedDistrictProviderElement(super.provider);
+
+  @override
+  String get districtId => (origin as SelectedDistrictProvider).districtId;
+}
+
+String _$townshipsForDistrictHash() =>
+    r'aebd302bce15873e08cbcce7f19b639878e9510e';
+
+/// See also [townshipsForDistrict].
+@ProviderFor(townshipsForDistrict)
+const townshipsForDistrictProvider = TownshipsForDistrictFamily();
+
+/// See also [townshipsForDistrict].
+class TownshipsForDistrictFamily extends Family<AsyncValue<List<Township>>> {
+  /// See also [townshipsForDistrict].
+  const TownshipsForDistrictFamily();
+
+  /// See also [townshipsForDistrict].
+  TownshipsForDistrictProvider call(
+    String districtId,
+  ) {
+    return TownshipsForDistrictProvider(
+      districtId,
+    );
+  }
+
+  @override
+  TownshipsForDistrictProvider getProviderOverride(
+    covariant TownshipsForDistrictProvider provider,
+  ) {
+    return call(
+      provider.districtId,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'townshipsForDistrictProvider';
+}
+
+/// See also [townshipsForDistrict].
+class TownshipsForDistrictProvider
+    extends AutoDisposeFutureProvider<List<Township>> {
+  /// See also [townshipsForDistrict].
+  TownshipsForDistrictProvider(
+    String districtId,
+  ) : this._internal(
+          (ref) => townshipsForDistrict(
+            ref as TownshipsForDistrictRef,
+            districtId,
+          ),
+          from: townshipsForDistrictProvider,
+          name: r'townshipsForDistrictProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$townshipsForDistrictHash,
+          dependencies: TownshipsForDistrictFamily._dependencies,
+          allTransitiveDependencies:
+              TownshipsForDistrictFamily._allTransitiveDependencies,
+          districtId: districtId,
+        );
+
+  TownshipsForDistrictProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.districtId,
+  }) : super.internal();
+
+  final String districtId;
+
+  @override
+  Override overrideWith(
+    FutureOr<List<Township>> Function(TownshipsForDistrictRef provider) create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: TownshipsForDistrictProvider._internal(
+        (ref) => create(ref as TownshipsForDistrictRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        districtId: districtId,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeFutureProviderElement<List<Township>> createElement() {
+    return _TownshipsForDistrictProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is TownshipsForDistrictProvider &&
+        other.districtId == districtId;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, districtId.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+mixin TownshipsForDistrictRef on AutoDisposeFutureProviderRef<List<Township>> {
+  /// The parameter `districtId` of this provider.
+  String get districtId;
+}
+
+class _TownshipsForDistrictProviderElement
+    extends AutoDisposeFutureProviderElement<List<Township>>
+    with TownshipsForDistrictRef {
+  _TownshipsForDistrictProviderElement(super.provider);
+
+  @override
+  String get districtId => (origin as TownshipsForDistrictProvider).districtId;
 }
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

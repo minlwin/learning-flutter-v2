@@ -1,14 +1,7 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:go_router/go_router.dart';
-import 'package:http/http.dart' as http;
-import 'package:riverpod_annotation/riverpod_annotation.dart';
-
-part 'division.freezed.dart';
-part 'division.g.dart';
+import 'package:p03_locations/providers/location.provider.dart';
 
 class Divisions extends ConsumerWidget {
   const Divisions({super.key});
@@ -42,24 +35,4 @@ class Divisions extends ConsumerWidget {
       ),
     );
   }
-}
-
-@freezed
-abstract class Division with _$Division {
-  const factory Division({
-    required int id,
-    required String name,
-    required int districts,
-  }) = $Division;
-
-  factory Division.fromJson(Map<String, Object?> json) =>
-      _$DivisionFromJson(json);
-}
-
-@riverpod
-Future<List<Division>> divisionList(DivisionListRef ref) async {
-  final resp =
-      await http.get(Uri.http("localhost:8080", "/locations/divisions"));
-  final json = jsonDecode(resp.body) as List<dynamic>;
-  return json.map((e) => Division.fromJson(e)).toList(growable: false);
 }

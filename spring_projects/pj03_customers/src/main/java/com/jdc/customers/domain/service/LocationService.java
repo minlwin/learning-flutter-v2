@@ -64,8 +64,7 @@ public class LocationService {
 	}
 
 	public DistrictInfo findDistrict(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return districtRepo.findById(id).map(DistrictInfo::from).orElseThrow();
 	}
 
 }
