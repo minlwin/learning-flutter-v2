@@ -1,6 +1,6 @@
 package com.jdc.customers.api.input;
 
-public record CustomerSearch(
+public record AddressSearch(		
 		Integer divisionId,
 		Integer districtId,
 		Integer townshipId,

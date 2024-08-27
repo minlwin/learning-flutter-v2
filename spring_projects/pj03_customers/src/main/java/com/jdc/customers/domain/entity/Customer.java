@@ -1,6 +1,7 @@
 package com.jdc.customers.domain.entity;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -28,6 +29,9 @@ public class Customer {
 	private Gender gender;
 	@Column(nullable = false)
 	private LocalDate dob;
+
+	@Column(nullable = false)
+	private LocalDateTime registAt;
 	
 	@OneToMany(mappedBy = "customer")
 	private List<Address> address;

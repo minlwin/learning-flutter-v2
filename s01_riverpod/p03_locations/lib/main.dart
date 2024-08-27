@@ -53,8 +53,12 @@ void main(List<String> args) {
 
 class MyObserver extends ProviderObserver {
   @override
-  void providerDidFail(ProviderBase<Object?> provider, Object error,
-      StackTrace stackTrace, ProviderContainer container) {
+  void providerDidFail(
+    ProviderBase<Object?> provider,
+    Object error,
+    StackTrace stackTrace,
+    ProviderContainer container,
+  ) {
     log("Provider $provider throws $error and trace is $stackTrace");
   }
 }
