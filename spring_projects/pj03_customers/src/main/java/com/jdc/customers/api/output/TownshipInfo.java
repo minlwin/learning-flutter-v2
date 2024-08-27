@@ -30,4 +30,10 @@ public record TownshipInfo(int id, String name, int districtId, String district,
 			cb.asc(division.get(Division_.id))
 		);
 	}
+
+	public static TownshipInfo from(Township entity) {
+		var district = entity.getDistrict();
+		var division = district.getDivision();
+		return new TownshipInfo(entity.getId(), entity.getName(), district.getId(), district.getName(), division.getId(), division.getName());
+	}
 }

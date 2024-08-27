@@ -1,7 +1,9 @@
 package com.jdc.customers.api.input;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
+import com.jdc.customers.domain.entity.Customer;
 import com.jdc.customers.domain.entity.Customer.Gender;
 
 import jakarta.validation.constraints.NotBlank;
@@ -18,4 +20,20 @@ public record CustomerForm(
 		LocalDate dob
 		) {
 
+	public Customer entity() {
+		var entity = new Customer();
+		entity.setName(name);
+		entity.setPhone(phone);
+		entity.setGender(gender);
+		entity.setDob(dob);
+		entity.setRegistAt(LocalDateTime.now());
+		return entity;
+	}
+	
+	public void update(Customer entity) {
+		entity.setName(name);
+		entity.setPhone(phone);
+		entity.setGender(gender);
+		entity.setDob(dob);
+	}
 }

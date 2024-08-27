@@ -15,6 +15,7 @@ import com.jdc.customers.api.input.AddressForm;
 import com.jdc.customers.api.input.AddressSearch;
 import com.jdc.customers.api.output.AddressInfo;
 import com.jdc.customers.domain.PageInfo;
+import com.jdc.customers.domain.service.AddressService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -22,29 +23,31 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @RequestMapping("addresses")
 public class AddressApi {
+	
+	private final AddressService service;
 
 	@GetMapping
 	PageInfo<AddressInfo> search(AddressSearch search, 
 			@RequestParam(required = false, defaultValue = "0") int page, 
 			@RequestParam(required = false, defaultValue = "10") int size) {
-		return null;
+		return service.search(search, page, size);
 	}
 	
 	@PostMapping
 	AddressInfo create(
 			@Validated @RequestBody AddressForm form, BindingResult result) {
-		return null;
+		return service.create(form);
 	}
 	
 	@GetMapping("{id}")
 	AddressInfo findById(@PathVariable String id) {
-		return null;
+		return service.findById(id);
 	}
 	
 	@PutMapping("{id}")
 	AddressInfo update(@PathVariable String id,
 			@Validated @RequestBody AddressForm form, BindingResult result) {
-		return null;
+		return service.update(id, form);
 	}
 	
 }

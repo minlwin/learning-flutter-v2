@@ -1,5 +1,9 @@
 package com.jdc.customers.api.input;
 
+import com.jdc.customers.domain.entity.Address;
+import com.jdc.customers.domain.entity.Customer;
+import com.jdc.customers.domain.entity.Township;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -14,5 +18,17 @@ public record AddressForm(
 		String street,
 		@NotBlank(message = "Enter building")
 		String building) {
+
+	public Address entity(Township township, Customer customer) {
+		
+		var entity = new Address();
+		entity.setCustomer(customer);
+		entity.setTownship(township);
+		entity.setQuarter(quarter);
+		entity.setStreet(street);
+		entity.setBuilding(building);
+		
+		return entity;
+	}
 
 }
