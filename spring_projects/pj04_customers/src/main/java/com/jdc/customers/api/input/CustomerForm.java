@@ -4,6 +4,9 @@ import java.time.LocalDate;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import com.jdc.customers.domain.entity.Address;
+import com.jdc.customers.domain.entity.Customer;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -24,6 +27,35 @@ public record CustomerForm(
 		String street,
 		@NotBlank(message = "Enter building")
 		String building,
-		@NotNull(message = "Select customer profile image")
 		MultipartFile profile) {
+
+	public Customer entity() {
+		
+		var entity = new Customer();
+		entity.setName(name);
+		entity.setPhone(phone);
+		entity.setEmail(email);
+		entity.setDob(dob);
+		
+		var address = new Address();
+		address.setBuilding(building);
+		address.setQuarter(quarter);
+		address.setStreet(street);
+		
+		entity.setAddress(address);
+		
+		return entity;
+	}
+
+	public void update(Customer entity) {
+		entity.setName(name);
+		entity.setPhone(phone);
+		entity.setEmail(email);
+		entity.setDob(dob);
+		
+		var address = entity.getAddress();
+		address.setBuilding(building);
+		address.setQuarter(quarter);
+		address.setStreet(street);
+	}
 }
