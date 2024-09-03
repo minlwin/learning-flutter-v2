@@ -316,14 +316,14 @@ class CreateCustomerFamily extends Family<AsyncValue<Customer>> {
   /// See also [createCustomer].
   CreateCustomerProvider call({
     required ({
-      String building,
-      String dob,
-      String email,
-      String name,
-      String phone,
-      String quarter,
-      String street,
-      int township
+      String? building,
+      String? dob,
+      String? email,
+      String? name,
+      String? phone,
+      String? quarter,
+      String? street,
+      int? township
     }) form,
   }) {
     return CreateCustomerProvider(
@@ -360,14 +360,14 @@ class CreateCustomerProvider extends AutoDisposeFutureProvider<Customer> {
   /// See also [createCustomer].
   CreateCustomerProvider({
     required ({
-      String building,
-      String dob,
-      String email,
-      String name,
-      String phone,
-      String quarter,
-      String street,
-      int township
+      String? building,
+      String? dob,
+      String? email,
+      String? name,
+      String? phone,
+      String? quarter,
+      String? street,
+      int? township
     }) form,
   }) : this._internal(
           (ref) => createCustomer(
@@ -397,14 +397,14 @@ class CreateCustomerProvider extends AutoDisposeFutureProvider<Customer> {
   }) : super.internal();
 
   final ({
-    String building,
-    String dob,
-    String email,
-    String name,
-    String phone,
-    String quarter,
-    String street,
-    int township
+    String? building,
+    String? dob,
+    String? email,
+    String? name,
+    String? phone,
+    String? quarter,
+    String? street,
+    int? township
   }) form;
 
   @override
@@ -447,14 +447,14 @@ class CreateCustomerProvider extends AutoDisposeFutureProvider<Customer> {
 mixin CreateCustomerRef on AutoDisposeFutureProviderRef<Customer> {
   /// The parameter `form` of this provider.
   ({
-    String building,
-    String dob,
-    String email,
-    String name,
-    String phone,
-    String quarter,
-    String street,
-    int township
+    String? building,
+    String? dob,
+    String? email,
+    String? name,
+    String? phone,
+    String? quarter,
+    String? street,
+    int? township
   }) get form;
 }
 
@@ -464,14 +464,14 @@ class _CreateCustomerProviderElement
 
   @override
   ({
-    String building,
-    String dob,
-    String email,
-    String name,
-    String phone,
-    String quarter,
-    String street,
-    int township
+    String? building,
+    String? dob,
+    String? email,
+    String? name,
+    String? phone,
+    String? quarter,
+    String? street,
+    int? township
   }) get form => (origin as CreateCustomerProvider).form;
 }
 
@@ -490,14 +490,14 @@ class UpdateCustomerFamily extends Family<AsyncValue<Customer>> {
   UpdateCustomerProvider call({
     required String id,
     required ({
-      String building,
-      String dob,
-      String email,
-      String name,
-      String phone,
-      String quarter,
-      String street,
-      int township
+      String? building,
+      String? dob,
+      String? email,
+      String? name,
+      String? phone,
+      String? quarter,
+      String? street,
+      int? township
     }) form,
   }) {
     return UpdateCustomerProvider(
@@ -537,14 +537,14 @@ class UpdateCustomerProvider extends AutoDisposeFutureProvider<Customer> {
   UpdateCustomerProvider({
     required String id,
     required ({
-      String building,
-      String dob,
-      String email,
-      String name,
-      String phone,
-      String quarter,
-      String street,
-      int township
+      String? building,
+      String? dob,
+      String? email,
+      String? name,
+      String? phone,
+      String? quarter,
+      String? street,
+      int? township
     }) form,
   }) : this._internal(
           (ref) => updateCustomer(
@@ -578,14 +578,14 @@ class UpdateCustomerProvider extends AutoDisposeFutureProvider<Customer> {
 
   final String id;
   final ({
-    String building,
-    String dob,
-    String email,
-    String name,
-    String phone,
-    String quarter,
-    String street,
-    int township
+    String? building,
+    String? dob,
+    String? email,
+    String? name,
+    String? phone,
+    String? quarter,
+    String? street,
+    int? township
   }) form;
 
   @override
@@ -635,14 +635,14 @@ mixin UpdateCustomerRef on AutoDisposeFutureProviderRef<Customer> {
 
   /// The parameter `form` of this provider.
   ({
-    String building,
-    String dob,
-    String email,
-    String name,
-    String phone,
-    String quarter,
-    String street,
-    int township
+    String? building,
+    String? dob,
+    String? email,
+    String? name,
+    String? phone,
+    String? quarter,
+    String? street,
+    int? township
   }) get form;
 }
 
@@ -654,15 +654,31 @@ class _UpdateCustomerProviderElement
   String get id => (origin as UpdateCustomerProvider).id;
   @override
   ({
-    String building,
-    String dob,
-    String email,
-    String name,
-    String phone,
-    String quarter,
-    String street,
-    int township
+    String? building,
+    String? dob,
+    String? email,
+    String? name,
+    String? phone,
+    String? quarter,
+    String? street,
+    int? township
   }) get form => (origin as UpdateCustomerProvider).form;
 }
+
+String _$customerEditHash() => r'0a322cd5de117497afd249982fb1461dd7e656da';
+
+/// See also [CustomerEdit].
+@ProviderFor(CustomerEdit)
+final customerEditProvider =
+    NotifierProvider<CustomerEdit, CustomerForm>.internal(
+  CustomerEdit.new,
+  name: r'customerEditProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$customerEditHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef _$CustomerEdit = Notifier<CustomerForm>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

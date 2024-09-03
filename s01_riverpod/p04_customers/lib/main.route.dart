@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:p04_customers/screens/customer_address.screen.dart';
 import 'package:p04_customers/screens/customer_details.screen.dart';
 import 'package:p04_customers/screens/customer_edit.screen.dart';
 import 'package:p04_customers/screens/customer_list.screen.dart';
@@ -20,12 +21,16 @@ final router = GoRouter(routes: [
           ),
           GoRoute(
             path: "add",
-            builder: (context, state) => const CustomerEditScreen(),
+            builder: (context, state) => CustomerEditScreen(),
           ),
           GoRoute(
             path: "edit:id",
             builder: (context, state) =>
                 CustomerEditScreen(id: state.pathParameters['id']),
+          ),
+          GoRoute(
+            path: "address",
+            builder: (context, state) => const CustomerAddressScreen(),
           )
         ],
       ),

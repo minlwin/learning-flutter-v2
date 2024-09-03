@@ -62,15 +62,26 @@ PageInfo<CustomerInfo> customerPageFromJson(Map<String, dynamic> json) => (
     );
 
 typedef CustomerForm = ({
-  String name,
-  String phone,
-  String email,
-  String dob,
-  String building,
-  String street,
-  String quarter,
-  int township
+  String? name,
+  String? phone,
+  String? email,
+  String? dob,
+  String? building,
+  String? street,
+  String? quarter,
+  int? township
 });
+
+CustomerForm newCustomerForm() => (
+      name: null,
+      phone: null,
+      email: null,
+      dob: null,
+      building: null,
+      street: null,
+      quarter: null,
+      township: null
+    );
 
 extension CustomerFormDto on CustomerForm {
   Map<String, dynamic> toJson() => {
@@ -83,4 +94,38 @@ extension CustomerFormDto on CustomerForm {
         "quarter": this.quarter,
         "township": this.township,
       };
+
+  CustomerForm withInfo({
+    required String name,
+    required phone,
+    required email,
+    required dob,
+  }) =>
+      (
+        name: name,
+        phone: phone,
+        email: email,
+        dob: dob,
+        building: this.building,
+        street: this.street,
+        quarter: this.quarter,
+        township: this.township
+      );
+
+  CustomerForm withAddress({
+    required String building,
+    required String street,
+    required String quarter,
+    required int township,
+  }) =>
+      (
+        name: this.name,
+        phone: this.phone,
+        email: this.email,
+        dob: this.dob,
+        building: building,
+        street: street,
+        quarter: quarter,
+        township: township
+      );
 }

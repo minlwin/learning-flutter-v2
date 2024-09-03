@@ -30,3 +30,41 @@ Future<Customer> updateCustomer(UpdateCustomerRef ref,
   final result = CustomerClient.getInstance().update(id: id, form: form);
   return result;
 }
+
+@Riverpod(keepAlive: true)
+class CustomerEdit extends _$CustomerEdit {
+  @override
+  CustomerForm build() => newCustomerForm();
+
+  void setInfo({
+    required String name,
+    required phone,
+    required email,
+    required dob,
+  }) {
+    state = state.withInfo(
+      name: name,
+      phone: phone,
+      email: email,
+      dob: dob,
+    );
+  }
+
+  void setAddress({
+    required String building,
+    required String street,
+    required String quarter,
+    required int township,
+  }) {
+    state = state.withAddress(
+      building: building,
+      street: street,
+      quarter: quarter,
+      township: township,
+    );
+  }
+
+  void clear() {
+    state = newCustomerForm();
+  }
+}

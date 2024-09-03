@@ -1,10 +1,11 @@
 import 'package:dio/dio.dart';
+import 'package:p04_customers/clients/base.url.dart';
 import 'package:p04_customers/domains/customer.domain.dart';
 
 class CustomerClient {
   CustomerClient._();
 
-  final _dio = Dio(BaseOptions(baseUrl: "http://localhost:8080"));
+  final _dio = Dio(BaseOptions(baseUrl: baseUrl()));
 
   static CustomerClient? _instance;
 
