@@ -1,0 +1,2 @@
+/Users/minlwin/git/learning-flutter-v2/s01_riverpod/p03_locations/android/app/.cxx/RelWithDebInfo/514w5z1b/x86/CMakeFiles/edit_cache.dir
+/Users/minlwin/git/learning-flutter-v2/s01_riverpod/p03_locations/android/app/.cxx/RelWithDebInfo/514w5z1b/x86/CMakeFiles/rebuild_cache.dir

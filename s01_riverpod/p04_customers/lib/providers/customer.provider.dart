@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:p04_customers/clients/customer.client.dart';
 import 'package:p04_customers/domains/customer.domain.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -5,27 +6,26 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'customer.provider.g.dart';
 
 @riverpod
-Future<PageInfo<CustomerInfo>> customerPage(CustomerPageRef ref,
+Future<PageInfo<CustomerInfo>> customerPage(Ref ref,
     {int page = 0, int size = 10}) async {
   final result = CustomerClient.getInstance().search(page: page, size: size);
   return result;
 }
 
 @riverpod
-Future<Customer> customerById(CustomerByIdRef ref, {required String id}) async {
+Future<Customer> customerById(Ref ref, {required String id}) async {
   final result = CustomerClient.getInstance().findById(id: id);
   return result;
 }
 
 @riverpod
-Future<Customer> createCustomer(CreateCustomerRef ref,
-    {required CustomerForm form}) async {
+Future<Customer> createCustomer(Ref ref, {required CustomerForm form}) async {
   final result = CustomerClient.getInstance().create(form);
   return result;
 }
 
 @riverpod
-Future<Customer> updateCustomer(UpdateCustomerRef ref,
+Future<Customer> updateCustomer(Ref ref,
     {required String id, required CustomerForm form}) async {
   final result = CustomerClient.getInstance().update(id: id, form: form);
   return result;

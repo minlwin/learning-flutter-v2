@@ -19,6 +19,8 @@ final divisionListProvider = AutoDisposeFutureProvider<List<Division>>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef DivisionListRef = AutoDisposeFutureProviderRef<List<Division>>;
 String _$districtForDivisionHash() =>
     r'59e11985add04af39efdc8f066eadfad3f8857a5';
@@ -159,6 +161,8 @@ class DistrictForDivisionProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin DistrictForDivisionRef on AutoDisposeFutureProviderRef<List<District>> {
   /// The parameter `divisionId` of this provider.
   int get divisionId;
@@ -288,6 +292,8 @@ class SelectedDivisionProvider extends AutoDisposeFutureProvider<Division> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin SelectedDivisionRef on AutoDisposeFutureProviderRef<Division> {
   /// The parameter `id` of this provider.
   int get id;
@@ -417,6 +423,8 @@ class SelectedDistrictProvider extends AutoDisposeFutureProvider<District> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin SelectedDistrictRef on AutoDisposeFutureProviderRef<District> {
   /// The parameter `districtId` of this provider.
   String get districtId;
@@ -549,6 +557,8 @@ class TownshipsForDistrictProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin TownshipsForDistrictRef on AutoDisposeFutureProviderRef<List<Township>> {
   /// The parameter `districtId` of this provider.
   String get districtId;
@@ -563,4 +573,4 @@ class _TownshipsForDistrictProviderElement
   String get districtId => (origin as TownshipsForDistrictProvider).districtId;
 }
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

@@ -19,6 +19,8 @@ final divisionsProvider = AutoDisposeFutureProvider<List<Division>>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef DivisionsRef = AutoDisposeFutureProviderRef<List<Division>>;
 String _$districtsHash() => r'ad8a0b8ec6e041918a13b5abcac92c104af1a477';
 
@@ -155,6 +157,8 @@ class DistrictsProvider extends AutoDisposeFutureProvider<List<District>> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin DistrictsRef on AutoDisposeFutureProviderRef<List<District>> {
   /// The parameter `division` of this provider.
   int get division;
@@ -282,6 +286,8 @@ class TownshipsProvider extends AutoDisposeFutureProvider<List<Township>> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin TownshipsRef on AutoDisposeFutureProviderRef<List<Township>> {
   /// The parameter `district` of this provider.
   int get district;
@@ -295,4 +301,4 @@ class _TownshipsProviderElement
   int get district => (origin as TownshipsProvider).district;
 }
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

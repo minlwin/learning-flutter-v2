@@ -90,7 +90,7 @@ class AddressForm extends ConsumerWidget {
           ],
         ),
       ),
-    )
+    );
   }
 
   Widget _selectOne(

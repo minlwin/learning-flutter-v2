@@ -24,8 +24,12 @@ mixin _$Division {
   String get name => throw _privateConstructorUsedError;
   int get districts => throw _privateConstructorUsedError;
 
+  /// Serializes this Division to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Division
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DivisionCopyWith<Division> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$DivisionCopyWithImpl<$Res, $Val extends Division>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Division
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$$DivisionImplCopyWithImpl<$Res>
       _$$DivisionImpl _value, $Res Function(_$$DivisionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Division
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,11 +155,13 @@ class _$$DivisionImpl implements $Division {
                 other.districts == districts));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name, districts);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Division
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$$DivisionImplCopyWith<_$$DivisionImpl> get copyWith =>
@@ -180,8 +190,11 @@ abstract class $Division implements Division {
   String get name;
   @override
   int get districts;
+
+  /// Create a copy of Division
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$$DivisionImplCopyWith<_$$DivisionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -198,8 +211,12 @@ mixin _$District {
   String get division => throw _privateConstructorUsedError;
   int get townships => throw _privateConstructorUsedError;
 
+  /// Serializes this District to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of District
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DistrictCopyWith<District> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -223,6 +240,8 @@ class _$DistrictCopyWithImpl<$Res, $Val extends District>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of District
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -277,6 +296,8 @@ class __$$$DistrictImplCopyWithImpl<$Res>
       _$$DistrictImpl _value, $Res Function(_$$DistrictImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of District
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -355,12 +376,14 @@ class _$$DistrictImpl implements $District {
                 other.townships == townships));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, name, divisionId, division, townships);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of District
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$$DistrictImplCopyWith<_$$DistrictImpl> get copyWith =>
@@ -395,8 +418,11 @@ abstract class $District implements District {
   String get division;
   @override
   int get townships;
+
+  /// Create a copy of District
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$$DistrictImplCopyWith<_$$DistrictImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -414,8 +440,12 @@ mixin _$Township {
   int get divisionId => throw _privateConstructorUsedError;
   String get division => throw _privateConstructorUsedError;
 
+  /// Serializes this Township to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Township
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TownshipCopyWith<Township> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -444,6 +474,8 @@ class _$TownshipCopyWithImpl<$Res, $Val extends Township>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Township
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -508,6 +540,8 @@ class __$$$TownshipImplCopyWithImpl<$Res>
       _$$TownshipImpl _value, $Res Function(_$$TownshipImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Township
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -596,12 +630,14 @@ class _$$TownshipImpl implements $Township {
                 other.division == division));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, name, districtId, district, divisionId, division);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Township
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$$TownshipImplCopyWith<_$$TownshipImpl> get copyWith =>
@@ -639,8 +675,11 @@ abstract class $Township implements Township {
   int get divisionId;
   @override
   String get division;
+
+  /// Create a copy of Township
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$$TownshipImplCopyWith<_$$TownshipImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

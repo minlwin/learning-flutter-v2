@@ -19,7 +19,9 @@ mixin _$Division {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Division
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DivisionCopyWith<Division> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -42,6 +44,8 @@ class _$DivisionCopyWithImpl<$Res, $Val extends Division>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Division
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +84,8 @@ class __$$$DivisionImplCopyWithImpl<$Res>
       _$$DivisionImpl _value, $Res Function(_$$DivisionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Division
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -126,7 +132,9 @@ class _$$DivisionImpl implements $Division {
   @override
   int get hashCode => Object.hash(runtimeType, id, name);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Division
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$$DivisionImplCopyWith<_$$DivisionImpl> get copyWith =>
@@ -141,8 +149,11 @@ abstract class $Division implements Division {
   int get id;
   @override
   String get name;
+
+  /// Create a copy of Division
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$$DivisionImplCopyWith<_$$DivisionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -153,7 +164,9 @@ mixin _$Township {
   String get name => throw _privateConstructorUsedError;
   Division get division => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Township
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TownshipCopyWith<Township> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -178,6 +191,8 @@ class _$TownshipCopyWithImpl<$Res, $Val extends Township>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Township
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -201,6 +216,8 @@ class _$TownshipCopyWithImpl<$Res, $Val extends Township>
     ) as $Val);
   }
 
+  /// Create a copy of Township
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DivisionCopyWith<$Res> get division {
@@ -232,6 +249,8 @@ class __$$$TownshipImplCopyWithImpl<$Res>
       _$$TownshipImpl _value, $Res Function(_$$TownshipImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Township
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -288,7 +307,9 @@ class _$$TownshipImpl implements $Township {
   @override
   int get hashCode => Object.hash(runtimeType, id, name, division);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Township
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$$TownshipImplCopyWith<_$$TownshipImpl> get copyWith =>
@@ -307,8 +328,11 @@ abstract class $Township implements Township {
   String get name;
   @override
   Division get division;
+
+  /// Create a copy of Township
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$$TownshipImplCopyWith<_$$TownshipImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

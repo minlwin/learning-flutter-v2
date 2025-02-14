@@ -21,7 +21,7 @@ final router = GoRouter(routes: [
           ),
           GoRoute(
             path: "add",
-            builder: (context, state) => CustomerEditScreen(),
+            builder: (context, state) => const CustomerEditScreen(),
           ),
           GoRoute(
             path: "edit:id",
