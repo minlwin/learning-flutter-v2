@@ -5,7 +5,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'person.g.dart';
 
 @riverpod
-String personName(PersonNameRef ref) => "JDC";
+String personName(Ref ref) => "JDC";
 
 class PersonWidget extends StatelessWidget {
   const PersonWidget({super.key});

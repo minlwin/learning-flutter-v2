@@ -75,4 +75,4 @@ class CurrentPage extends _$CurrentPage {
 }
 
 @riverpod
-String message(MessageRef ref) => "Hello Riverpod";
+String message(Ref ref) => "Hello Riverpod";
